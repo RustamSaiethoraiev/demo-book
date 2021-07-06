@@ -1,0 +1,24 @@
+
+ /* .breakpoints{
+     border-left:solid 5px gray;
+    border-right:solid 5px gray;
+    min-width:390px;
+     min-height: 100vh; */
+
+
+ 
+/* @include media-breakpoint-up('xs'){
+    background-color: #fffadd;
+}
+@include media-breakpoint-up('sm'){
+    background-color: #fed6bc;
+}
+@include media-breakpoint-up('md'){
+    background-color: #def7fe;
+}
+@include media-breakpoint-up('lg'){
+    background-color: #efecff;
+}
+@include media-breakpoint-up('xl'){
+    background-color: #c6d8ff;
+} */

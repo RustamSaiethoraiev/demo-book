@@ -1,0 +1,9 @@
+body{text-align: center}
+    
+.table-container {
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+@import './media.css';
+
