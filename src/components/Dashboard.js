@@ -24,6 +24,7 @@ const Dashboard = (props) => {
     })
     return (
         <div className="container breakpoints">
+            <h1>Demo book list</h1>
             <Table responsive="md">
                 <thead>
                     <tr key="headTable">
