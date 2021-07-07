@@ -1,22 +1,25 @@
 import { Button, FormGroup, Label, Input, Form } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+// import Alert from 'Alert';
 const AddBook = (props) => {
-    const initialStateBook = { ISBN: '', autor: '', category: '', title: '', id: '' };
+    const initialStateBook = { autor: '', category: '', title: '', id: '' };
     const [newBookData, setNewBookData] = useState(initialStateBook);
+    // const [emptyField, setEmptyField] = useState(false)
     const addBookSubmit = (e) => {
         e.preventDefault();
-        if (newBookData.autor === "" || newBookData.title === "" || newBookData.ISBN === "") {
-            alert("All the fields are mandatory!");
+        if (newBookData.autor === "" || newBookData.title === "") {
+
             return
         }
         props.addBook(newBookData);
-        setNewBookData({ ISBN: '', autor: '', category: '', title: '', id: '' });
+        setNewBookData({ autor: '', category: '', title: '', id: '' });
         props.history.push('/');
     }
     return (
         <div className="container">
             <h2>Add book</h2>
+            {/* <Alert /> */}
             <Form onSubmit={addBookSubmit}>
                 <FormGroup>
                     <Label for="title">Book title</Label>
@@ -52,17 +55,7 @@ const AddBook = (props) => {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label for="ISBN">International Standard Book Number (ISBN)</Label>
-                    <Input
-                        required
-                        type="number"
-                        id="ISBN"
-                        placeholder="ISBN"
-                        value={newBookData.ISBN}
-                        onChange={(e) => setNewBookData({ ...newBookData, ISBN: e.target.value })} />
-                </FormGroup>
-                <FormGroup>
-                    <Label for="id">ID</Label>
+                    <Label for="id">ISBN</Label>
                     <Input
                         required
                         type="number"

@@ -1,18 +1,22 @@
 {
   "books": [
     {
-      "ISBN": "14",
       "autor": "Kipling",
       "category": "Adventures",
       "title": "Jungle book",
-      "id": "3"
+      "id": "454545"
     },
     {
-      "ISBN": "56",
       "autor": "Kipling",
-      "category": "Adventures",
+      "category": "Novel",
       "title": "Jungle book",
-      "id": "5"
+      "id": "454545454545"
+    },
+    {
+      "autor": "Kipling",
+      "category": "Novel",
+      "title": "Jungle book",
+      "id": "121212"
     }
   ]
 }

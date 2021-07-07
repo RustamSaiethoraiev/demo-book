@@ -2,8 +2,8 @@ import { Button, FormGroup, Label, Input, Form } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 const EditBook = (props) => {
-    const { id, title, autor, category, ISBN } = props.location.state.book
-    const initialStateBook = { ISBN, autor, category, title, id };
+    const { id, title, autor, category } = props.location.state.book
+    const initialStateBook = { autor, category, title, id };
     const [newBookData, setNewBookData] = useState(initialStateBook);
     const update = (e) => {
         e.preventDefault();
@@ -12,7 +12,7 @@ const EditBook = (props) => {
             return
         }
         props.updateBook(newBookData);
-        setNewBookData({ ISBN: '', autor: '', category: '', title: '', id: '' });
+        setNewBookData({ autor: '', category: '', title: '', id: '' });
         props.history.push('/');
     }
     return (
@@ -56,14 +56,14 @@ const EditBook = (props) => {
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label for="ISBN">International Standard Book Number (ISBN)</Label>
+                    <Label for="id">ISBN</Label>
                     <Input
                         required
                         type="number"
-                        id="ISBN"
-                        placeholder="ISBN"
-                        value={newBookData.ISBN}
-                        onChange={(e) => setNewBookData({ ...newBookData, ISBN: e.target.value })} />
+                        id="id"
+                        placeholder="id"
+                        value={newBookData.id}
+                        onChange={(e) => setNewBookData({ ...newBookData, id: e.target.value })} />
                 </FormGroup>
                 <Button className="m-2" >Update</Button>
             </Form>
