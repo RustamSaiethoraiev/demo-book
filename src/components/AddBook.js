@@ -1,17 +1,13 @@
 import { Button, FormGroup, Label, Input, Form } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-// import Alert from 'Alert';
+//console.log(Alert);
 const AddBook = (props) => {
     const initialStateBook = { autor: '', category: '', title: '', id: '' };
     const [newBookData, setNewBookData] = useState(initialStateBook);
     // const [emptyField, setEmptyField] = useState(false)
     const addBookSubmit = (e) => {
         e.preventDefault();
-        if (newBookData.autor === "" || newBookData.title === "") {
-
-            return
-        }
         props.addBook(newBookData);
         setNewBookData({ autor: '', category: '', title: '', id: '' });
         props.history.push('/');
@@ -19,7 +15,6 @@ const AddBook = (props) => {
     return (
         <div className="container">
             <h2>Add book</h2>
-            {/* <Alert /> */}
             <Form onSubmit={addBookSubmit}>
                 <FormGroup>
                     <Label for="title">Book title</Label>

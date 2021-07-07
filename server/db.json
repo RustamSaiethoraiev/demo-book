@@ -2,15 +2,9 @@
   "books": [
     {
       "autor": "Kipling",
-      "category": "Adventures",
-      "title": "Jungle book",
-      "id": "454545"
-    },
-    {
-      "autor": "Kipling",
       "category": "Novel",
       "title": "Jungle book",
-      "id": "454545454545"
+      "id": "2"
     },
     {
       "autor": "Kipling",

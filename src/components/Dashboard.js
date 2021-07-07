@@ -9,14 +9,14 @@ const Dashboard = (props) => {
     }
     const renderBooks = books.map((book) => {
         return (
-            <tr key={book.ISBN} >
-                <td key={book.id}>{book.id}</td>
+            <tr key={book.id} >
                 <td key={book.title}>{book.title}</td>
                 <td key={book.autor}>{book.autor}</td>
                 <td key={book.category}>{book.category}</td>
+                <td key={book.id}>{book.id}</td>
                 <td>
                     <Link to={{ pathname: "/edit", state: { book: book } }}>
-                        < Button color="success" size="sm" className="m-2" value={book.id} > Edit</Button ></Link >
+                        < Button color="success" size="sm" className="m-2" value={book.id} >Edit</Button ></Link >
                     <Button value={book.id} color="danger" size="sm" onClick={getID}>Delete</Button>
                 </td>
             </tr>)
