@@ -1,22 +1,10 @@
 {
   "books": [
     {
-      "autor": "Kipling4",
-      "category": "Novel",
-      "title": "Jungle book",
-      "id": "1"
-    },
-    {
       "autor": "Kipling",
       "category": "Novel",
       "title": "Jungle book",
       "id": "2"
-    },
-    {
-      "autor": "Kipling",
-      "category": "Novel",
-      "title": "Jungle book",
-      "id": "5"
     }
   ]
 }
