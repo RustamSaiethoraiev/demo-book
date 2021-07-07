@@ -16,7 +16,7 @@ const Dashboard = (props) => {
                 <td key={book.id}>{book.id}</td>
                 <td>
                     <Link to={{ pathname: "/edit", state: { book: book } }}>
-                        < Button color="success" size="sm" className="m-2" value={book.id} >Edit</Button ></Link >
+                        < Button color="success" size="sm" className="m-2" value={book.id} > Edit</Button ></Link >
                     <Button value={book.id} color="danger" size="sm" onClick={getID}>Delete</Button>
                 </td>
             </tr>)
@@ -27,10 +27,10 @@ const Dashboard = (props) => {
             <Table responsive="md">
                 <thead>
                     <tr key="headTable">
-                        <th>ISBN</th>
                         <th>Book title</th>
                         <th>Autor name</th>
                         <th>Category</th>
+                        <th>ISBN</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
