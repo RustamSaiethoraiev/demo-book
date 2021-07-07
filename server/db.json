@@ -1,10 +1,25 @@
 {
   "books": [
     {
+      "autor": "Kipling4",
+      "category": "Detective",
+      "title": "Jungle book 2",
+      "id": "1",
+      "ISBN": "4444"
+    },
+    {
+      "autor": "Kipling",
+      "category": "Detective",
+      "title": "Jungle book",
+      "id": "2",
+      "ISBN": "123457890"
+    },
+    {
       "autor": "Kipling",
       "category": "Novel",
       "title": "Jungle book",
-      "id": "2"
+      "id": "3434",
+      "ISBN": "343434"
     }
   ]
 }

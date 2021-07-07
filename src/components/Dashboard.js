@@ -10,10 +10,11 @@ const Dashboard = (props) => {
     const renderBooks = books.map((book) => {
         return (
             <tr key={book.id} >
+                <td key={book.id}>{book.id}</td>
                 <td key={book.title}>{book.title}</td>
                 <td key={book.autor}>{book.autor}</td>
                 <td key={book.category}>{book.category}</td>
-                <td key={book.id}>{book.id}</td>
+                <td key={book.ISBN}>{book.ISBN}</td>
                 <td>
                     <Link to={{ pathname: "/edit", state: { book: book } }}>
                         < Button color="success" size="sm" className="m-2" value={book.id} > Edit</Button ></Link >
@@ -27,6 +28,7 @@ const Dashboard = (props) => {
             <Table responsive="md">
                 <thead>
                     <tr key="headTable">
+                        <th>ID</th>
                         <th>Book title</th>
                         <th>Autor name</th>
                         <th>Category</th>

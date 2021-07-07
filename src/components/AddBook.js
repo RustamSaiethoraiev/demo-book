@@ -3,19 +3,28 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 //console.log(Alert);
 const AddBook = (props) => {
-    const initialStateBook = { autor: '', category: '', title: '', id: '' };
+    const initialStateBook = { autor: '', category: '', title: '', id: '', ISBN: '' };
     const [newBookData, setNewBookData] = useState(initialStateBook);
     // const [emptyField, setEmptyField] = useState(false)
-    const addBookSubmit = (e) => {
-        e.preventDefault();
+    const addBookSubmit = () => {
         props.addBook(newBookData);
-        setNewBookData({ autor: '', category: '', title: '', id: '' });
+        setNewBookData({ autor: '', category: '', title: '', id: '', ISBN: '' });
         props.history.push('/');
     }
     return (
         <div className="container">
             <h2>Add book</h2>
             <Form onSubmit={addBookSubmit}>
+                <FormGroup>
+                    <Label for="title">id</Label>
+                    <Input
+                        required
+                        type="number"
+                        id="id"
+                        placeholder="id"
+                        value={newBookData.id}
+                        onChange={(e) => setNewBookData({ ...newBookData, id: e.target.value })} />
+                </FormGroup>
                 <FormGroup>
                     <Label for="title">Book title</Label>
                     <Input
@@ -44,20 +53,21 @@ const AddBook = (props) => {
                         id="exampleSelect"
                         value={newBookData.category}
                         onChange={(e) => setNewBookData({ ...newBookData, category: e.target.value })} >
+                        <option value=""></option>
                         <option value="Detective">Detective</option>
                         <option value="Novel">Novel</option>
                         <option value="Adventures">Adventures</option>
                     </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label for="id">ISBN</Label>
+                    <Label for="ISBN">ISBN</Label>
                     <Input
                         required
                         type="number"
-                        id="id"
-                        placeholder="id"
-                        value={newBookData.id}
-                        onChange={(e) => setNewBookData({ ...newBookData, id: e.target.value })} />
+                        id="ISBN"
+                        placeholder="ISBN"
+                        value={newBookData.ISBN}
+                        onChange={(e) => setNewBookData({ ...newBookData, ISBN: e.target.value })} />
                 </FormGroup>
                 <Button className="m-2" >Add a book</Button>
                 <Link to="/">
